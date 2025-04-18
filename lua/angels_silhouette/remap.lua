@@ -21,26 +21,6 @@ vim.keymap.set("n", "<C-Down>", "<cmd>resize +2<cr>")
 vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>")
 vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>")
 
--- Oil
-require("oil").setup {
-    use_default_keymaps = true,
-    keymaps = {
-        ["g?"] = { "actions.show_help", mode = "n" },
-        ["<CR>"] = "actions.select",
-        ["<C-p>"] = "actions.preview",
-        ["<C-c>"] = { "actions.close", mode = "n" },
-        ["<C-l>"] = "actions.refresh",
-        ["-"] = { "actions.parent", mode = "n" },
-        ["_"] = { "actions.open_cwd", mode = "n" },
-        ["`"] = { "actions.cd", mode = "n" },
-        ["~"] = { "actions.cd", opts = { scope = "tab" }, mode = "n" },
-        ["gs"] = { "actions.change_sort", mode = "n" },
-        ["gx"] = "actions.open_external",
-        ["g."] = { "actions.toggle_hidden", mode = "n" },
-        ["g\\"] = { "actions.toggle_trash", mode = "n" },
-    },
-}
-
 -- LSP
 vim.api.nvim_create_autocmd('LspAttach', {
     desc = 'LSP actions',

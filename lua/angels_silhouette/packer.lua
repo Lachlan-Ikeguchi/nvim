@@ -16,12 +16,40 @@ return require('packer').startup(function(use)
             { 'kkharji/sqlite.lua', module = 'sqlite' },
         },
     }
-    
+
     -- Comment
     use 'terrortylor/nvim-comment'
 
     -- File system
-    use "stevearc/oil.nvim"
+    use {
+        "stevearc/oil.nvim",
+        config = function()
+            require("oil").setup {
+                default_file_explorer = true,
+                delete_to_trash = true,
+                skip_confirm_for_simple_edits = true,
+                prompt_save_on_select_new_entry = true,
+                lsp_file_methods = {
+                    autosave_changes = true,
+                },
+                watch_for_changes = true,
+                view_options = {
+                    show_hidden = true,
+                },
+                git = {
+                    add = function(path)
+                        return true
+                    end,
+                    mv = function(src_path, dest_path)
+                        return true
+                    end,
+                    rm = function(path)
+                        return true
+                    end,
+                },
+            }
+        end,
+    }
 
     -- Git
     use 'tpope/vim-fugitive'

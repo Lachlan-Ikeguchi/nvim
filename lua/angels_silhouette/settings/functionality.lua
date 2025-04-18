@@ -83,63 +83,16 @@ require('nvim_comment').setup {
 -- File system
 require("oil").setup {
     default_file_explorer = true,
-    columns = {
-        "icon",
-        -- "permissions",
-        -- "size",
-        -- "mtime",
-    },
-    buf_options = {
-        buflisted = false,
-        bufhidden = "hide",
-    },
-    win_options = {
-        wrap = false,
-        signcolumn = "no",
-        cursorcolumn = false,
-        foldcolumn = "0",
-        spell = false,
-        list = false,
-        conceallevel = 3,
-        concealcursor = "nvic",
-    },
     delete_to_trash = true,
     skip_confirm_for_simple_edits = true,
     prompt_save_on_select_new_entry = true,
-    cleanup_delay_ms = 2000,
     lsp_file_methods = {
-        enabled = true,
-        timeout_ms = 1000,
         autosave_changes = true,
     },
-    constrain_cursor = "editable",
     watch_for_changes = true,
     view_options = {
         show_hidden = true,
-        -- This function defines what is considered a "hidden" file
-        is_hidden_file = function(name, bufnr)
-            local m = name:match("^%.")
-            return m ~= nil
-        end,
-        -- This function defines what will never be shown, even when `show_hidden` is set
-        is_always_hidden = function(name, bufnr)
-            return false
-        end,
-        -- Sort file names with numbers in a more intuitive order for humans.
-        -- Can be "fast", true, or false. "fast" will turn it off for large directories.
-        natural_order = "fast",
-        case_insensitive = false,
-        sort = {
-            -- sort order can be "asc" or "desc"
-            { "type", "asc" },
-            { "name", "asc" },
-        },
-        highlight_filename = function(entry, is_hidden, is_link_target, is_link_orphan)
-            return nil
-        end,
     },
-    -- Extra arguments to pass to SCP when moving/copying files over SSH
-    extra_scp_args = {},
     git = {
         add = function(path)
             return true
@@ -150,44 +103,5 @@ require("oil").setup {
         rm = function(path)
             return true
         end,
-    },
-    preview_win = {
-        update_on_cursor_moved = true,
-        preview_method = "fast_scratch",
-        disable_preview = function(filename)
-            return false
-        end,
-        win_options = {},
-    },
-    confirmation = {
-        max_width = 0.9,
-        min_width = { 40, 0.4 },
-        width = nil,
-        max_height = 0.9,
-        min_height = { 5, 0.1 },
-        height = nil,
-        border = "rounded",
-        win_options = {
-            winblend = 0,
-        },
-    },
-    progress = {
-        max_width = 0.9,
-        min_width = { 40, 0.4 },
-        width = nil,
-        max_height = { 10, 0.9 },
-        min_height = { 5, 0.1 },
-        height = nil,
-        border = "rounded",
-        minimized_border = "none",
-        win_options = {
-            winblend = 0,
-        },
-    },
-    ssh = {
-        border = "rounded",
-    },
-    keymaps_help = {
-        border = "rounded",
     },
 }
