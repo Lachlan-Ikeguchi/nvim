@@ -1,5 +1,3 @@
-vim.g.mapleader = " "
-
 -- wordwrap
 vim.keymap.set("n", "<leader>z", function()
     ---@diagnostic disable-next-line: undefined-field
@@ -193,3 +191,4 @@ vim.keymap.set("n", "<leader>2", function()
     vim.cmd [[colorscheme matrix]]
     require("ibl").setup()
 end)
+

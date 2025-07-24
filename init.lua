@@ -1,1 +1,1 @@
-require("angels_silhouette.init")
+require("config.lazy")
