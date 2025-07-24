@@ -1,6 +1,6 @@
 return {
     "hrsh7th/nvim-cmp",
-    {
+    dependencies = {
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-calc',
         'hrsh7th/cmp-path',
@@ -8,10 +8,10 @@ return {
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/cmp-cmdline',
         'saadparwaiz1/cmp_luasnip',
+        "rafamadriz/friendly-snippets",
         {
             "L3MON4D3/LuaSnip",
-            run = "make install_jsregexp",
-            requires = "rafamadriz/friendly-snippets"
+            build = "make install_jsregexp",
         },
     },
     config = function()

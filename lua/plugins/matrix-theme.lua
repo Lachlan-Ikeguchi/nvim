@@ -1,3 +1,1 @@
-return {
-	'iruzo/matrix-nvim',
-}
+return { 'iruzo/matrix-nvim' }
