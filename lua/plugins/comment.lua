@@ -5,7 +5,10 @@ return {
             marker_padding = true,
             comment_empty = false,
             comment_empty_trim_whitespace = true,
-            hook = nil
+            hook = nil,
+            create_mappings = true,
+            line_mapping = "<leader>cl",
+            operator_mapping = "<leader>cc",
         }
     end
 }

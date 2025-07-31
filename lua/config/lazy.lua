@@ -20,9 +20,6 @@ vim.opt.rtp:prepend(lazypath)
 -- This is also a good place to setup other settings (vim.opt)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
-require("config.keymap")
-
-vim.cmd.colorscheme "catppuccin"
 
 require("config.settings")
 
@@ -40,6 +37,10 @@ require("lazy").setup({
     -- automatically check for plugin updates
     checker = { enabled = true },
 })
+
+require("config.keymap")
+
+vim.cmd.colorscheme "catppuccin"
 
 local highlight = {
     "RainbowRed",
