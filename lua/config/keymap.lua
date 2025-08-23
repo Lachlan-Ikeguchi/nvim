@@ -1,3 +1,6 @@
+-- update
+vim.keymap.set("n", "<leader>ls", "<cmd>Lazy sync<cr>")
+
 -- wordwrap
 vim.keymap.set("n", "<leader>z", function()
     ---@diagnostic disable-next-line: undefined-field
