@@ -1,5 +1,5 @@
 -- update
-vim.keymap.set("n", "<leader>ls", "<cmd>Lazy sync<cr>")
+vim.keymap.set("n", "<leader>sl", "<cmd>Lazy sync<cr>")
 
 -- wordwrap
 vim.keymap.set("n", "<leader>z", function()
