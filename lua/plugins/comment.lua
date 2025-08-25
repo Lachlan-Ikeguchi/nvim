@@ -7,8 +7,6 @@ return {
             comment_empty_trim_whitespace = true,
             hook = nil,
             create_mappings = true,
-            line_mapping = "<leader>cl",
-            operator_mapping = "<leader>cc",
         }
     end
 }

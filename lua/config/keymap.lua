@@ -44,6 +44,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
 -- file manager
 vim.keymap.set("n", "<leader><Tab>", "<cmd>Oil<cr>")
 
+-- telescope
+local telescope_builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', telescope_builtin.find_files, {})
+vim.keymap.set('n', '<leader>m', telescope_builtin.man_pages, {})
+vim.keymap.set('n', '<leader>bf', telescope_builtin.buffers, {})
+vim.keymap.set('n', '<leader>fb', telescope_builtin.git_branches, {})
+vim.keymap.set('n', '<leader>fs', telescope_builtin.git_stash, {})
+vim.keymap.set('n', '<leader>fe', telescope_builtin.symbols, {})
+
 -- panels
 vim.keymap.set("n", "<leader>v", vim.cmd.vnew)
 vim.keymap.set("n", "<leader>h", vim.cmd.new)
@@ -59,6 +68,27 @@ vim.keymap.set("n", "<leader>gp", "<cmd>Git pull<cr>")
 vim.keymap.set("n", "<leader>gP", "<cmd>Git push<cr>")
 vim.keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame<cr>")
 vim.keymap.set("n", "<leader>gl", "<cmd>Gclog<cr>")
+
+-- git conflict
+--[[
+co -- choose ours
+ct -- choose theirs
+cb -- choose both
+c0 -- choose none
+[x -- next conflict
+]x -- previous conflict
+--]]
+
+-- comments
+require('nvim_comment').setup {
+    line_mapping = "<leader>cl",
+    operator_mapping = "<leader>cc",
+}
+
+-- harpoon
+local harpoon = require("harpoon")
+vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
+vim.keymap.set("n", "<leader>l", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
 -- terminal
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
@@ -96,4 +126,3 @@ vim.keymap.set("n", "<leader>2", function()
     vim.cmd [[colorscheme matrix]]
     require("ibl").setup()
 end)
-
