@@ -1,3 +1,30 @@
+function apply_catppuccin_theme()
+    vim.cmd [[colorscheme catppuccin]]
+
+    local highlight = {
+        "CatppuccinRed",
+        "CatppuccinYellow",
+        "CatppuccinBlue",
+        "CatppuccinOrange",
+        "CatppuccinGreen",
+        "CatppuccinViolet",
+        "CatppuccinCyan",
+    }
+
+    local hooks = require "ibl.hooks"
+    hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+        vim.api.nvim_set_hl(0, "CatppuccinRed", { fg = "#f38ba8" })
+        vim.api.nvim_set_hl(0, "CatppuccinYellow", { fg = "#f9e2af" })
+        vim.api.nvim_set_hl(0, "CatppuccinBlue", { fg = "#89b4fa" })
+        vim.api.nvim_set_hl(0, "CatppuccinOrange", { fg = "#fab387" })
+        vim.api.nvim_set_hl(0, "CatppuccinGreen", { fg = "#a6e3a1" })
+        vim.api.nvim_set_hl(0, "CatppuccinViolet", { fg = "#cba6f7" })
+        vim.api.nvim_set_hl(0, "CatppuccinCyan", { fg = "#89dceb" })
+    end)
+
+    require("ibl").setup { indent = { highlight = highlight } }
+end
+
 return {
     "catppuccin/nvim",
     name = "catppuccin",
