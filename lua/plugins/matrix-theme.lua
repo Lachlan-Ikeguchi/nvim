@@ -1,6 +1,8 @@
 function apply_matrix_theme()
     vim.cmd [[colorscheme matrix]]
 
+    require("rainbow-delimiters").disable()
+
     local highlight = {
         "DarkGreen",
         "Green",

@@ -1,6 +1,8 @@
 function apply_catppuccin_theme()
     vim.cmd [[colorscheme catppuccin]]
 
+    require("rainbow-delimiters").enable()
+
     local highlight = {
         "CatppuccinRed",
         "CatppuccinYellow",
