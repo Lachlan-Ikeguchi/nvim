@@ -94,7 +94,7 @@ require('nvim_comment').setup {
 local multicursor = require("multicursor-nvim")
 multicursor.setup()
 
-vim.keymap.set({"n", "x"}, "M", multicursor.matchAllAddCursors)
+vim.keymap.set({ "n", "x" }, "M", multicursor.matchAllAddCursors)
 vim.keymap.set("x", "I", multicursor.insertVisual)
 vim.keymap.set("x", "A", multicursor.appendVisual)
 
