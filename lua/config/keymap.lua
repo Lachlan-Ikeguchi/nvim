@@ -51,8 +51,9 @@ vim.keymap.set('n', '<leader>fl', telescope_builtin.live_grep, {})
 vim.keymap.set('n', '<leader>m', telescope_builtin.man_pages, {})
 vim.keymap.set('n', '<leader>bf', telescope_builtin.buffers, {})
 vim.keymap.set('n', '<leader>fb', telescope_builtin.git_branches, {})
-vim.keymap.set('n', '<leader>fs', telescope_builtin.git_stash, {})
 vim.keymap.set('n', '<leader>fe', telescope_builtin.symbols, {})
+vim.keymap.set('n', '<leader>wt', '<cmd>Telescope git_worktree<cr>')
+vim.keymap.set("n", "<leader>wc", "<cmd>Telescope git_worktree create<cr>")
 
 -- clipboard
 vim.keymap.set('n', '<leader>cb', "<cmd>Telescope neoclip<cr>")
@@ -67,7 +68,6 @@ vim.keymap.set("n", "<leader>w", vim.cmd.w)
 
 -- git
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
-vim.keymap.set("n", "<leader>gS", "<cmd>Git stash<cr>")
 vim.keymap.set("n", "<leader>gf", "<cmd>Git fetch<cr>")
 vim.keymap.set("n", "<leader>gp", "<cmd>Git pull<cr>")
 vim.keymap.set("n", "<leader>gP", "<cmd>Git push<cr>")

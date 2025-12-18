@@ -19,6 +19,8 @@ vim.opt.scrolloff = 10
 
 vim.opt.clipboard = "unnamedplus"
 
+vim.opt.background = "dark"
+
 vim.api.nvim_create_autocmd('User', {
     pattern = 'GitConflictDetected',
     callback = function()

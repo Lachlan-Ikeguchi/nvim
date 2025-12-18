@@ -19,4 +19,4 @@ function apply_matrix_theme()
     require("ibl").setup { indent = { highlight = highlight } }
 end
 
-return { 'iruzo/matrix-nvim' }
+return { 'lachlan-ikeguchi/nvim-matrix-theme', branch = 'feat/expanded_palette' }
