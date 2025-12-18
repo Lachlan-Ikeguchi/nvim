@@ -65,6 +65,7 @@ vim.keymap.set("n", "<leader>w", vim.cmd.w)
 
 -- git
 vim.keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame<cr>")
+vim.keymap.set("n", "<leader>gl", "<cmd>Gclog<cr>")
 
 -- comments
 require('nvim_comment').setup {
