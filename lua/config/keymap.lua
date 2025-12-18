@@ -145,11 +145,6 @@ multicursor.addKeymapLayer(function(layerSet)
     end)
 end)
 
--- harpoon
-local harpoon = require("harpoon")
-vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
-vim.keymap.set("n", "<leader>l", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
-
 -- terminal
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 vim.keymap.set("n", "<leader>>", vim.cmd.terminal)
