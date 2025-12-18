@@ -50,7 +50,6 @@ vim.keymap.set('n', '<leader>ff', telescope_builtin.find_files, {})
 vim.keymap.set('n', '<leader>fl', telescope_builtin.live_grep, {})
 vim.keymap.set('n', '<leader>m', telescope_builtin.man_pages, {})
 vim.keymap.set('n', '<leader>bf', telescope_builtin.buffers, {})
-vim.keymap.set('n', '<leader>fb', telescope_builtin.git_branches, {})
 vim.keymap.set('n', '<leader>fe', telescope_builtin.symbols, {})
 
 -- clipboard
@@ -66,16 +65,6 @@ vim.keymap.set("n", "<leader>w", vim.cmd.w)
 
 -- git
 vim.keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame<cr>")
-
--- git conflict
---[[
-co -- choose ours
-ct -- choose theirs
-cb -- choose both
-c0 -- choose none
-[x -- next conflict
-]x -- previous conflict
---]]
 
 -- comments
 require('nvim_comment').setup {
