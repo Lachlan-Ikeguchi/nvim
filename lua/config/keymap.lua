@@ -64,8 +64,12 @@ vim.keymap.set("n", "<leader>q", vim.cmd.q)
 vim.keymap.set("n", "<leader>w", vim.cmd.w)
 
 -- git
-vim.keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame<cr>")
+vim.keymap.set('n', '<leader>gb', telescope_builtin.git_branches, {})
+vim.keymap.set('n', '<leader>gc', telescope_builtin.git_commits, {})
+vim.keymap.set('n', '<leader>fc', telescope_builtin.git_bcommits, {})
+vim.keymap.set('n', '<leader>gs', telescope_builtin.git_status, {})
 vim.keymap.set("n", "<leader>gl", "<cmd>Gclog<cr>")
+vim.keymap.set("n", "<leader>bl", "<cmd>Gitsigns blame<cr>")
 
 -- comments
 require('nvim_comment').setup {
