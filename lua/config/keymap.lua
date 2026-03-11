@@ -55,6 +55,12 @@ vim.keymap.set('n', '<leader>fe', telescope_builtin.symbols, {})
 -- clipboard
 vim.keymap.set('n', '<leader>cb', "<cmd>Telescope neoclip<cr>")
 
+-- harpoon
+local harpoon = require("harpoon")
+harpoon:setup()
+vim.keymap.set('n', '<leader>a', function() harpoon:list():add() end)
+vim.keymap.set('n', '<leader>l', function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+
 -- panels
 vim.keymap.set("n", "<leader>v", vim.cmd.vnew)
 vim.keymap.set("n", "<leader>h", vim.cmd.new)
