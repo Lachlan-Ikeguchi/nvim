@@ -40,4 +40,4 @@ require("lazy").setup({
 
 require("config.keymap")
 
-apply_catppuccin_theme()
+apply_dracula_theme()
