@@ -19,9 +19,9 @@ return {
 
         local cmp = require('cmp')
         cmp.setup({
-            preselect = 'item',
+            preselect = cmp.PreselectMode.None,
             completion = {
-                completeopt = 'menu,menuone,noinsert'
+                completeopt = 'menu,menuone,noinsert,noselect'
             },
             sources = {
                 { name = 'nvim_lsp' },
@@ -44,6 +44,19 @@ return {
                 ['<CR>'] = cmp.mapping.confirm({ select = false }),
                 ['<C-u>'] = cmp.mapping.scroll_docs(-4),
                 ['<C-d>'] = cmp.mapping.scroll_docs(4),
+                ['<Esc>'] = cmp.mapping(function(fallback)
+                    if cmp.visible() then
+                        local entry = cmp.get_selected_entry()
+                        if entry then
+                            cmp.close()
+                            cmp.complete()
+                        else
+                            fallback()
+                        end
+                    else
+                        fallback()
+                    end
+                end, { 'i', 's' }),
                 ['<Tab>'] = cmp.mapping(function(fallback)
                     local luasnip = require('luasnip')
                     local col = vim.fn.col('.') - 1
