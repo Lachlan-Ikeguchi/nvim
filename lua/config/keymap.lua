@@ -77,6 +77,18 @@ vim.keymap.set('n', '<leader>gs', telescope_builtin.git_status, {})
 vim.keymap.set("n", "<leader>gl", "<cmd>Gclog<cr>")
 vim.keymap.set("n", "<leader>bl", "<cmd>Gitsigns blame<cr>")
 
+-- git conflict
+require 'git-conflict'.setup {
+    default_mappings = {
+        ours = 'co',
+        theirs = 'ct',
+        none = 'c0',
+        both = 'cb',
+        next = ']x',
+        prev = '[x',
+    },
+}
+
 -- comments
 require('nvim_comment').setup {
     line_mapping = "<leader>cl",
