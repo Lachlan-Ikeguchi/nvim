@@ -13,7 +13,9 @@ end)
 
 -- tabs
 vim.keymap.set("n", "<leader>p", vim.cmd.tabn)
+vim.keymap.set("n", "<leader><s-p>", "<cmd>+tabmove<cr>")
 vim.keymap.set("n", "<leader>o", vim.cmd.tabp)
+vim.keymap.set("n", "<leader><s-o>", "<cmd>-tabmove<cr>")
 vim.keymap.set("n", "<leader>nt", vim.cmd.tabnew)
 
 -- resize
