@@ -2,6 +2,8 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = 'yes'
 
+vim.opt.foldmethod = 'marker'
+
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
