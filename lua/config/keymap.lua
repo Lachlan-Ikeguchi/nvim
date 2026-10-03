@@ -53,6 +53,7 @@ vim.keymap.set('n', '<leader>fl', telescope_builtin.live_grep, {})
 vim.keymap.set('n', '<leader>m', telescope_builtin.man_pages, {})
 vim.keymap.set('n', '<leader>bf', telescope_builtin.buffers, {})
 vim.keymap.set('n', '<leader>fe', telescope_builtin.symbols, {})
+vim.keymap.set('n', '<leader>jl', telescope_builtin.jumplist, {})
 
 -- clipboard
 vim.keymap.set('n', '<leader>cb', "<cmd>Telescope neoclip<cr>")
