@@ -36,6 +36,14 @@ require("lazy").setup({
     -- install = { colorscheme = { "habamax" } },
     -- automatically check for plugin updates
     checker = { enabled = false },
+    icons = {
+        cmd = '>', config = '$', debug = '!', event = '~',
+        favorite = '*', ft = '#', init = '$', import = '>',
+        keys = 'K', lazy = 'L', loaded = '+', not_loaded = '-',
+        plugin = '@', runtime = 'R', require = 'r',
+        source = '=', start = '>', task = 'x',
+        list = { '+', '>', '*', '-' },
+    },
 })
 
 require("config.keymap")
