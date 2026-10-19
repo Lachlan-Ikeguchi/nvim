@@ -48,4 +48,4 @@ require("lazy").setup({
 
 require("config.keymap")
 
-apply_dracula_theme()
+apply_matrix_theme()
