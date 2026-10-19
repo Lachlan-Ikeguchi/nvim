@@ -1,8 +1,6 @@
 function apply_dracula_theme()
     vim.cmd [[colorscheme dracula]]
 
-    require("rainbow-delimiters").enable()
-
     local highlight = {
         "DraculaRed",
         "DraculaYellow",
