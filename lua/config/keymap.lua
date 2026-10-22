@@ -159,13 +159,9 @@ vim.keymap.set("n", "<leader>>", vim.cmd.terminal)
 
 -- colour scheme
 vim.keymap.set("n", "<leader>1", function()
-    apply_catppuccin_theme()
+    apply_matrix_theme()
 end)
 
 vim.keymap.set("n", "<leader>2", function()
     apply_dracula_theme()
-end)
-
-vim.keymap.set("n", "<leader>3", function()
-    apply_matrix_theme()
 end)
